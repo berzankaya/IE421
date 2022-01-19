@@ -1,3 +1,39 @@
+---
+title: "HW4"
+output: html_document
+---
+
+library(shiny)
+
+
+View(mtcars)
+
+
+
+runExample("04_mpg")
+
+
+```{r}
+
+ggplot(data=mtcars, aes(mpg)) + 
+  geom_histogram(binwidth= 5, col="white", 
+                 fill="steelblue", 
+                 alpha = 1)  +
+  labs(x="mpg", y="count")  + facet_wrap(~cyl, nrow=3)
+
+```
+  
+  
+```{r}
+
+ggplot(data=mtcars, aes(mpg)) + 
+  geom_histogram( binwidth= 5, col="white", 
+                 fill="steelblue",
+                 alpha = 1)  +
+  labs(x="mpg", y="count")  + facet_wrap(~cyl, nrow=3)
+
+```
+
 library(shiny)
 library(datasets)
 
